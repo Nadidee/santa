@@ -41,7 +41,7 @@ body {
 </style>
 </head>
 
-<body>
+<body onclick="playMusic()">
 
 <div > <img id="santa" src="santa sleigh.png" alt="" ></div>
 
@@ -68,7 +68,7 @@ body {
 // }
 
 
-
+    let on = false;
   var element = document.getElementById('santa');
   var current_margin = 1;
   setInterval(function(){
@@ -82,12 +82,18 @@ body {
   
   function playMusic() {
   var audio = document.createElement('audio');
+    if(on == true) {
+    return
+    }
+    else {
   audio.setAttribute('src', 'Mariah_Carey_-_All_I_Want_For_Christmas_Is_You_Official_Video.mp3');
-  audio.load();
+    audio.play();
+    on = true
+    }
 }
-playMusic()
 
 
+// <iframe src="https://cross-origin.com/myvideo.html" allow="autoplay">
 
 
 </script>
