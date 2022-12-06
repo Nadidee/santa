@@ -27,15 +27,22 @@ body {
     margin: 100px auto;
 }
  .car {
+    float: left;
+    margin-top: 100px;
    
-    margin-top: 200px;
-    /* transform: rotate(3deg);
-    transition: 9s; */
 }
 
 #santa {
     width: 450px;
     height: auto;
+}
+
+#julenissen {
+height: 200px;
+width: auto;
+float: left;
+margin-left: 100px;
+visibility:hidden;
 }
 
 </style>
@@ -46,16 +53,14 @@ body {
 <div > <img id="santa" src="santa sleigh.png" alt="" ></div>
 
 <div class="container">
-<div class="car" id="car">
-    <img src="arac.png" alt="">
-
-
+    <div class="car" id="car">
+        <img src="arac.png" alt="">   </div>
+    <div> <img id="julenissen" src="santa-dance-santa-floss.gif " alt=""></div>
+     
 </div>
 
 
 
-</div>
-</div>
 
 
 <script>
@@ -68,7 +73,7 @@ body {
 // }
 
 
-    let on = false;
+let on = false;
   var element = document.getElementById('santa');
   var current_margin = 1;
   setInterval(function(){
@@ -88,12 +93,13 @@ body {
     else {
   audio.setAttribute('src', 'Mariah_Carey_-_All_I_Want_For_Christmas_Is_You_Official_Video.mp3');
     audio.play();
-    on = true
+    on = true;
+       document.getElementById("julenissen").style.visibility = "visible";
     }
 }
 
 
-// <iframe src="https://cross-origin.com/myvideo.html" allow="autoplay">
+
 
 
 </script>
