@@ -1,0 +1,93 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin-ext');
+
+* {
+    margin: 0px;
+    padding: 0px ;
+    border: 0px;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    font-family: 'Comfortaa', cursive;
+    background: url(panorama-road-street-with-houses-garlands-christmas-card-vector-illustration-winter-city-street-cartoon-style_273525-45.webp);
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+ 
+}
+
+.container {
+    width: 100%;
+    margin: 100px auto;
+}
+ .car {
+   
+    margin-top: 200px;
+    /* transform: rotate(3deg);
+    transition: 9s; */
+}
+
+#santa {
+    width: 450px;
+    height: auto;
+}
+
+</style>
+</head>
+
+<body>
+
+<div > <img id="santa" src="santa sleigh.png" alt="" ></div>
+
+<div class="container">
+<div class="car" id="car">
+    <img src="arac.png" alt="">
+
+
+</div>
+
+
+
+</div>
+</div>
+
+
+<script>
+//  playMusic('https://www.youtube.com/watch?v=yXQViqx6GMY')
+// /* write a function for playing music on my webpage */
+// function playMusic(url) {
+//   var audio = document.createElement('audio');
+//   audio.src = url;
+//   audio.play();
+// }
+playMusic()
+function playMusic() {
+  var audio = document.createElement('audio');
+  audio.setAttribute('src', 'https://www.youtube.com/watch?v=yXQViqx6GMY');
+  audio.play();
+}
+
+  var element = document.getElementById('santa');
+  var current_margin = 1;
+  setInterval(function(){
+    if(window.innerWidth<=current_margin+100){
+      current_margin = 1;
+    }
+    new_margin = parseInt(current_margin)+1;
+    current_margin = new_margin;
+    element.style.marginLeft = new_margin;
+  },10);
+
+
+
+
+</script>
+
+</body>
+</html>
