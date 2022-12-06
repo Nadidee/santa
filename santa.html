@@ -66,12 +66,8 @@ body {
 //   audio.src = url;
 //   audio.play();
 // }
-playMusic()
-function playMusic() {
-  var audio = document.createElement('audio');
-  audio.setAttribute('src', 'Mariah_Carey_-_All_I_Want_For_Christmas_Is_You_Official_Video.mp3');
-  audio.play();
-}
+
+
 
   var element = document.getElementById('santa');
   var current_margin = 1;
@@ -83,6 +79,13 @@ function playMusic() {
     current_margin = new_margin;
     element.style.marginLeft = new_margin;
   },10);
+  
+  function playMusic() {
+  var audio = document.createElement('audio');
+  audio.setAttribute('src', 'Mariah_Carey_-_All_I_Want_For_Christmas_Is_You_Official_Video.mp3');
+  audio.load();
+}
+playMusic()
 
 
 
